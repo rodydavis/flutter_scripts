@@ -1,0 +1,29 @@
+name: flutter_scripts
+description: Run dart/flutter scripts defined in a pubspec.yaml
+version: 0.0.1
+homepage: https://github.com/rodydavis/plugins
+repository: https://github.com/rodydavis/flutter_scripts
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  args: ^2.3.1
+  cli_menu: ^0.3.0-nullsafety.0
+  mason_logger: ^0.1.0-dev.12
+  pub_updater: ^0.2.1
+
+dev_dependencies:
+  build_runner: ^2.0.0
+  build_verify: ^3.0.0
+  build_version: ^2.0.0
+  mocktail: ^0.3.0
+  test: ^1.19.2
+  very_good_analysis: ^3.0.1
+
+executables:
+  flutter_scripts:
+
+scripts:
+  local_update: dart pub global activate --source=path .
+  flutter_version: flutter --version
