@@ -1,6 +1,6 @@
 name: flutter_scripts
 description: Run dart/flutter scripts defined in a pubspec.yaml
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/rodydavis/plugins
 repository: https://github.com/rodydavis/flutter_scripts
 

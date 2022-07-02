@@ -69,12 +69,14 @@ class ScriptCommand extends Command<int> {
     }
     final commandMap = <String, String>{};
     for (final command in commands) {
-      final parts = command.split(':');
-      if (parts.length != 2) {
+      final splitIdx = command.indexOf(':');
+      final prefix = command.substring(0, splitIdx);
+      final suffix = command.substring(splitIdx + 1);
+      if (suffix.isEmpty || prefix.isEmpty) {
         _logger.err('Invalid command: $command');
         return ExitCode.software.code;
       }
-      commandMap[parts[0].trim()] = parts[1].trim();
+      commandMap[prefix.trim()] = suffix.trim();
     }
 
     if (commands.isEmpty) {
