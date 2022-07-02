@@ -39,7 +39,7 @@ $ flutter_scripts --version
 $ flutter_scripts --help
 ```
 
-Add scripts to any Flutter/Dart project like the following:
+Add scripts to any Flutter/Dart project in the `pubspec.yaml` like the following:
 
 ```yaml
 scripts:
